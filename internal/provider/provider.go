@@ -41,6 +41,7 @@ import (
 	"github.com/microsoft/terraform-provider-power-platform/internal/services/locations"
 	"github.com/microsoft/terraform-provider-power-platform/internal/services/managed_environment"
 	"github.com/microsoft/terraform-provider-power-platform/internal/services/powerapps"
+	"github.com/microsoft/terraform-provider-power-platform/internal/services/powerpages"
 	"github.com/microsoft/terraform-provider-power-platform/internal/services/rest"
 	"github.com/microsoft/terraform-provider-power-platform/internal/services/solution"
 	"github.com/microsoft/terraform-provider-power-platform/internal/services/tenant"
@@ -352,6 +353,7 @@ func (p *PowerPlatformProvider) Resources(ctx context.Context) []func() resource
 		func() resource.Resource {
 			return copilot_studio_application_insights.NewCopilotStudioApplicationInsightsResource()
 		},
+		func() resource.Resource { return powerpages.NewWebsiteResource() },
 	}
 }
 
