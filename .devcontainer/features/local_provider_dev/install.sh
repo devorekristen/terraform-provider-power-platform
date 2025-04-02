@@ -47,3 +47,14 @@ tfenv install latest
 go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.0.1
 #removing the golangci-lint binary from GOROOT/bin to avoid conflicts duplicated binaries
 rm $(go env GOROOT)/bin/golangci-lint
+
+# Install uv as its used by all MCP servers
+pip install uv
+
+# Create a directory for MCP servers
+#mkdir /workspaces/terraform-provider-power-platform/.mcp_servers/
+
+#cd /workspaces/terraform-provider-power-platform/.mcp_servers/
+#git clone https://github.com/lucasoeth/mitmproxy-mcp.git
+#rm -rf mitmproxy-mcp/.git 
+#rm mitmproxy-mcp/.gitignore

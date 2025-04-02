@@ -1,0 +1,20 @@
+{
+    "servers": {
+        "time": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-time"
+            ]
+        },
+        "mitmproxy-mcp": {
+            "type": "stdio",
+            "command": "uv",
+            "args": [
+                "--directory",
+                "/workspaces/terraform-provider-power-platform/.mcp_servers/mitmproxy-mcp",
+                "run",
+                "mitmproxy-mcp"
+            ]
+        }
+    }
+}
