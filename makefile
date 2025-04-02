@@ -61,7 +61,7 @@ coverage:
 	go tool cover -func=test-coverage.out
 
 netdump:
-	mitmdump -p 8080 -w /tmp/mitmproxy.dump
+	rm mitmproxy.dump & mitmdump -p 8080 -w mitmproxy.dump
 
 lint:
 	clear
